@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Animated Version</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+      body {
+        background-color: #ffffff;
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* --- Dasar Animasi Fly-In --- */
+      .hidden {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(40px);
+        transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+      }
+
+      .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+
+      /* --- Hero Section --- */
+      .hero {
+        padding: 120px 10%;
+        text-align: center;
+        background: linear-gradient(to bottom, #f9fafb, #ffffff);
+      }
+      .hero span {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: #6366f1;
+        font-weight: 700;
+      }
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-top: 10px;
+        font-weight: 800;
+        letter-spacing: -1.5px;
+      }
+      .hero p {
+        max-width: 600px;
+        margin: 20px auto;
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      /* --- Stats Section --- */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 70px 10%;
+        background: #111827;
+        color: white;
+        text-align: center;
+      }
+      .stat-item h3 {
+        font-size: 2.5rem;
+        color: #818cf8;
+      }
+
+      /* --- Core Values --- */
+      .values {
+        padding: 100px 10%;
+      }
+      .grid-values {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+      .value-card {
+        padding: 40px;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        background: white;
+      }
+
+      /* Delay agar kartu muncul berurutan (Staggered) */
+      .card-1 {
+        transition-delay: 100ms;
+      }
+      .card-2 {
+        transition-delay: 300ms;
+      }
+      .card-3 {
+        transition-delay: 500ms;
+      }
+
+      /* --- CTA --- */
+      .cta {
+        margin: 50px 10% 100px;
+        padding: 80px 40px;
+        background: #6366f1;
+        border-radius: 30px;
+        text-align: center;
+        color: white;
+      }
+      .btn {
+        display: inline-block;
+        padding: 16px 40px;
+        background: white;
+        color: #6366f1;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 700;
+        margin-top: 30px;
+        transition: 0.3s;
+      }
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero hidden">
+      <span>Since 2024</span>
+      <h1>Membangun Masa Depan Digital.</h1>
+      <p>
+        Kami adalah tim kreatif yang percaya bahwa teknologi harus memudahkan
+        hidup, bukan memperumitnya.
+      </p>
+    </section>
+
+    <section class="stats hidden">
+      <div class="stat-item">
+        <h3>500+</h3>
+        <p>Klien Bahagia</p>
+      </div>
+      <div class="stat-item">
+        <h3>12</h3>
+        <p>Penghargaan Desain</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Dukungan Teknis</p>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="grid-values">
+        <div class="value-card hidden card-1">
+          <h4>Kualitas Premium</h4>
+          <p>
+            Setiap piksel dan baris kode kami perhatikan untuk hasil yang
+            sempurna.
+          </p>
+        </div>
+        <div class="value-card hidden card-2">
+          <h4>Kecepatan</h4>
+          <p>
+            Dunia bergerak cepat, begitu juga kami dalam mengeksekusi ide Anda.
+          </p>
+        </div>
+        <div class="value-card hidden card-3">
+          <h4>Kolaborasi</h4>
+          <p>
+            Kami bukan sekadar vendor, kami adalah partner strategis bisnis
+            Anda.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta hidden">
+      <h2>Ingin membuat sesuatu yang luar biasa?</h2>
+      <p>Hubungi kami hari ini untuk konsultasi gratis.</p>
+      <a href="#" class="btn">Mulai Proyek</a>
+    </section>
+
+    <script>
+      // Inisialisasi Intersection Observer
+      const observerOptions = {
+        threshold: 0.15, // Elemen akan muncul jika 15% bagian sudah terlihat
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+          // Jika ingin animasi berulang setiap di-scroll ke atas lagi,
+          // aktifkan baris di bawah ini:
+          // else { entry.target.classList.remove('show'); }
+        });
+      }, observerOptions);
+
+      // Ambil semua elemen dengan class 'hidden'
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

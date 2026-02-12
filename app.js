@@ -64,7 +64,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Ambil semua elemen dengan class 'hidden'
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
@@ -73,7 +72,7 @@ document.querySelector(".open-all").addEventListener("click", function (e) {
 
   const details = document.querySelectorAll(".faq-item");
   const isOpening = this.textContent === "Open all";
-  const delayStep = 150; // Jeda antar item dalam milidetik (0.15 detik)
+  const delayStep = 150;
 
   details.forEach((detail, index) => {
     // Gunakan setTimeout untuk membuat efek berurutan

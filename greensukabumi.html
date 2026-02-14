@@ -48,10 +48,13 @@
         <a href="faq.html">FAQ</a>
       </div>
       <div class="navbar-icon" style="font-size: 1.4rem">
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        <a onclick="window.location = 'none'" id="hamburger-menu"
+          ><i data-feather="menu"></i
+        ></a>
       </div>
     </nav>
     <!-- Navbar End -->
+
     <!--Slideshow Start-->
     <section class="prod" style="background-image: url()" id="prod">
       <div
@@ -59,16 +62,27 @@
         style="background: linear-gradient(45deg, rgba(34, 92, 94, 0.7))"
       >
         <div class="prod-container">
+          <!-- Breadcrumbs-->
+          <nav class="breadcrumbs">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li>
+                <a href="product.html#tiles-and-walling">Tiles & Walling</a>
+              </li>
+              <li class="active">Green Sukabumi</li>
+            </ul>
+          </nav>
+          <!--Breadcrumbs End-->
           <div class="slider-container">
             <div class="slides-container">
               <div class="slide-container">
-                <img src="img/sukahead.png" loading="lazy" />
-                <img src="img/aboutus.jpg" loading="lazy" />
+                <img src="img/Sukabumi-head.webp" loading="lazy" />
+                <img src="img/Sukabumi-head2.webp" loading="lazy" />
                 <img src="img/aboutus.jpg" loading="lazy" />
                 <img src="img/aboutus.jpg" loading="lazy" />
                 <img src="img/aboutus.jpg" loading="lazy" />
               </div>
-              <div class="slider-title">Green Sukabumi</div>
             </div>
           </div>
           <div class="dots">
@@ -82,7 +96,7 @@
           <div class="arrow-right">
             <i class="bi bi-arrow-right-circle"></i>
           </div>
-          <div class="prod-content hidden">
+          <div class="prod-content">
             <div class="prod-title">Available Finishes</div>
             <div class="prod-box" style="cursor: pointer" loading="lazy">
               <img src="img/product/natural-stone/Green Sukabumi/Sawn.webp" />
@@ -120,7 +134,7 @@
               <table class="prod-table">
                 <thead>
                   <tr>
-                    <th>Size</th>
+                    <th>Size (cm)</th>
                     <th>Sawn</th>
                     <th>Honed</th>
                     <th>Rough</th>
@@ -131,7 +145,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>10 x 10 cm</td>
+                    <td>10 x 10</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
@@ -140,7 +154,7 @@
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>10 x 20 cm</td>
+                    <td>10 x 20</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
@@ -149,7 +163,7 @@
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>10 x 30 cm</td>
+                    <td>10 x 30</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
@@ -158,7 +172,7 @@
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>20 x 20 cm</td>
+                    <td>20 x 20</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
@@ -167,7 +181,7 @@
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>20 x 30 cm</td>
+                    <td>20 x 30</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: red">✘</td>
@@ -176,7 +190,7 @@
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>30 x 30 cm</td>
+                    <td>30 x 30</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: red">✘</td>
@@ -197,7 +211,7 @@
           </div>
           <div class="prod-p">
             <iframe
-              src="Green Sukabumi.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              src="file/Green Sukabumi.pdf#toolbar=0&navpanes=0&scrollbar=0"
               width="100%"
               height="1000px"
               style="border: none"
@@ -206,7 +220,7 @@
             >
               <p>
                 Your browser does not support PDFs.
-                <a href="Green Sukabumi.pdf">Download the PDF</a>.
+                <a href="file/Green Sukabumi.pdf">Download the PDF</a>.
               </p>
             </iframe>
           </div>
@@ -265,62 +279,105 @@
     <!--Slideshow End-->
     <!-- Contact us-->
     <section class="contactus">
-      <div class="contact-content">
-        <h1>Your Trusted B2B Partner</h1>
-        <p>
-          “Our commitment as your trusted B2B partner is to supply authentic
-          natural stone products while ensuring quality control, sustainability,
-          and long-term collaboration.”
-        </p>
+      <div class="contactus-bg">
+        <div class="contact-content">
+          <h1>Your Trusted B2B Partner</h1>
+          <p>
+            Our commitment as your trusted B2B partner is to supply authentic
+            natural stone products while ensuring quality control,
+            sustainability, and long-term collaboration.
+          </p>
+          <div class="contact-button">
+            <a href="https://wa.me/6287777497559"><button>WhatsApp</button></a>
+            <a href="mailto:cvjoharjaya@gmail.com"><button>Email</button></a>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Contact us End-->
     <!-- Footer-->
     <section class="footer" id="contact">
       <div class="footer-bg">
-        <h1>JOHAR JAYA INDONESIA</h1>
+        <div class="footer-company-content">
+          <div class="footer-box">
+            <h1>JOHAR JAYA INDONESIA</h1>
+            <p>Crafted by pleasure.</p>
+            <div class="footer-company">
+              <p>
+                <i class="bi bi-geo-alt-fill"></i> Main office & Factory :
+                <br />
+                <br />JL.Nyi Ageng Serang No.14B, Cikeduk, Dukupuntang, Cirebon,
+                West Java - Indonesia
+              </p>
+              <div class="footer-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d623.9859909528652!2d108.43368225517456!3d-6.762175163373847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1f8f468c0235%3A0x3ad7008fcfa8718c!2sCV%20JOHAR%20JAYA!5e0!3m2!1sen!2sid!4v1770670558152!5m2!1sen!2sid"
+                  style="border-radius: 8px"
+                  width="100%"
+                  height="100%"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="footer-content">
-          <div class="footer-title">
-            <h2>Company</h2>
-            <div class="footer-box">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d623.9859909528652!2d108.43368225517456!3d-6.762175163373847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1f8f468c0235%3A0x3ad7008fcfa8718c!2sCV%20JOHAR%20JAYA!5e0!3m2!1sen!2sid!4v1770670558152!5m2!1sen!2sid"
-                width="150"
-                height="150"
-                style="border-radius: 10px"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+          <div class="footer-box">
+            <div class="footer-title">
+              <h2>Social Media</h2>
             </div>
+            <ul id="companybox">
+              <li><a href="sukabumi.html">Facebook</a></li>
+              <li><a href="rusticsukabumi.html">Instagram</a></li>
+              <li><a href="stripes.html">X</a></li>
+              <li><a href="yellowsandstone.html">LinkedIn</a></li>
+              <li><a href="palimanan.html">StoneContact</a></li>
+            </ul>
           </div>
-          <div class="footer-title">
-            <h2>Product List</h2>
-            <div class="footer-box">
-              <ul>
-                <li><a href="sukabumi.html">Bali Sukabumi</a></li>
-                <li><a href="blacklava.html">Black Lava</a></li>
-                <li><a href="stripes.html">Palimanan Stripes</a></li>
-                <li><a href="rusticsukabumi.html">Rustic Sukabumi</a></li>
-                <li><a href="beigepalimanan.html">Beige Palimanan</a></li>
-                <li><a href="yellowsandstone.html">Yellow Sandstone</a></li>
-                <li><a href="palimanan.html">Yellow Palimanan</a></li>
-              </ul>
+          <div class="footer-box">
+            <div class="footer-title">
+              <h2>Company</h2>
             </div>
+            <ul id="companybox">
+              <li><a href="sukabumi.html">Legitimation</a></li>
+              <li><a href="rusticsukabumi.html">About us</a></li>
+              <li><a href="stripes.html">Services</a></li>
+              <li><a href="yellowsandstone.html">Contact</a></li>
+              <li><a href="palimanan.html">FAQ</a></li>
+            </ul>
           </div>
-          <div class="footer-title">
-            <h2>Product List</h2>
-            <div class="footer-box">
-              <ul>
-                <li><a href="sukabumi.html">Bali Sukabumi</a></li>
-                <li><a href="blacklava.html">Black Lava</a></li>
-                <li><a href="stripes.html">Palimanan Stripes</a></li>
-                <li><a href="rusticsukabumi.html">Rustic Sukabumi</a></li>
-                <li><a href="beigepalimanan.html">Beige Palimanan</a></li>
-                <li><a href="yellowsandstone.html">Yellow Sandstone</a></li>
-                <li><a href="palimanan.html">Yellow Palimanan</a></li>
-              </ul>
+          <div class="footer-box">
+            <div class="footer-title">
+              <h2>Product List</h2>
             </div>
+            <ul>
+              <li><a class="active">Green Sukabumi</a></li>
+              <li><a href="rusticsukabumi.html">Rustic Sukabumi</a></li>
+              <li><a href="stripes.html">Palimanan Stripes</a></li>
+              <li><a href="yellowsandstone.html">Yellow Sandstone</a></li>
+              <li><a href="palimanan.html">Yellow Palimanan</a></li>
+              <li><a href="whitepalimanan.html">White Palimanan</a></li>
+              <li><a href="blacklava.html">Black Lava</a></li>
+              <li><a href="andesite.html">Andesite</a></li>
+              <li><a href="stripes.html">Basalto</a></li>
+              <li><a href="curi.html">Curi Basalt</a></li>
+              <li><a href="paraswhite.html">Paras</a></li>
+              <li><a href="kerobokan.html">Bali Kerobokan</a></li>
+              <li><a href="paraswhite.html">River Stone Basin</a></li>
+              <li><a href="paraswhite.html">River Stone Pedestal</a></li>
+              <li><a href="paraswhite.html">River Stone Bathtub</a></li>
+              <li><a href="curi.html">Petrified Wood Basin</a></li>
+              <li><a href="paraswhite.html">Petrified Wood Pedestal</a></li>
+              <li><a href="kerobokan.html">Petrified Wood Bathtub</a></li>
+              <li><a href="kerobokan.html">Table</a></li>
+              <li><a href="kerobokan.html">Table Set</a></li>
+              <li><a href="kerobokan.html">Table Top</a></li>
+              <li><a href="kerobokan.html">Lamp</a></li>
+              <li><a href="kerobokan.html">Pedestal</a></li>
+              <li><a href="kerobokan.html">Planter</a></li>
+            </ul>
           </div>
         </div>
       </div>

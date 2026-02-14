@@ -58,33 +58,8 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
-    // Jika ingin animasi berulang setiap di-scroll ke atas lagi,
-    // aktifkan baris di bawah ini:
-    // else { entry.target.classList.remove('show'); }
   });
 }, observerOptions);
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
-
-document.querySelector(".open-all").addEventListener("click", function (e) {
-  e.preventDefault();
-
-  const details = document.querySelectorAll(".faq-item");
-  const isOpening = this.textContent === "Open all";
-  const delayStep = 150;
-
-  details.forEach((detail, index) => {
-    // Gunakan setTimeout untuk membuat efek berurutan
-    setTimeout(() => {
-      if (isOpening) {
-        detail.setAttribute("open", "");
-      } else {
-        detail.removeAttribute("open");
-      }
-    }, index * delayStep); // Item ke-1 (0ms), ke-2 (150ms), ke-3 (300ms), dst.
-  });
-
-  // Ubah teks tombol
-  this.textContent = isOpening ? "Close all" : "Open all";
-});

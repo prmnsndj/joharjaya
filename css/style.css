@@ -723,7 +723,7 @@ li {
   transition: 0.3s ease-in-out;
 }
 .arrow-right {
-  right: 10rem;
+  left: 422px;
 }
 .arrow-left:hover,
 .arrow-right:hover {
@@ -829,6 +829,9 @@ li {
   color: var(--col1);
   margin-top: 0.5rem;
 }
+.prod-p iframe {
+  overflow-y: hidden;
+}
 .prod-table {
   margin: 1.5rem auto;
   border-collapse: collapse;
@@ -860,7 +863,7 @@ li {
 }
 .faq-container {
   max-width: 100%;
-  background: white;
+  background: var(--bg2);
   padding: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -868,6 +871,7 @@ li {
 }
 .faq-header {
   display: flex;
+  background-color: var(--bg2);
   justify-content: space-between;
   padding-bottom: 20px;
   font-weight: bold;
@@ -1124,7 +1128,7 @@ details[open] .icon {
 }
 .footer-box h1 {
   font-family: "DM Serif Text", sans-serif;
-  font-size: 2.3rem;
+  font-size: 2.8rem;
   color: var(--bg2);
   text-align: center;
 }
@@ -1511,19 +1515,19 @@ details[open] .icon {
     align-items: left;
   }
   .footer-content {
-    padding: 6rem 12% 8rem;
+    padding: 6rem 17% 8rem;
     display: flex;
     grid-template-columns: 1; /* Membagi jadi 3 kolom rata kiri */
     justify-content: space-between;
     gap: 20px;
     align-items: start;
   }
-  .footer-title h2 {
+  .footer-box h2 {
     align-items: left;
-    font-size: large;
+    font-size: larger;
   }
   .footer-box a {
-    font-size: 10px;
+    font-size: 9px;
   }
   .footer-box p {
     font-size: 9px;
@@ -1538,6 +1542,9 @@ details[open] .icon {
   .footer-box ul li {
     /* Opsional: agar teks tidak terpotong jika terlalu panjang */
     white-space: nowrap;
+  }
+  .footer-box li a.active {
+    font-size: 9px;
   }
 }
 /* Mobile */

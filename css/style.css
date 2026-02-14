@@ -1113,8 +1113,7 @@ details[open] .icon {
 }
 .footer-company-content {
   display: grid;
-  grid-template-columns: repeat(1, 2fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: (1, 2fr);
   width: 100%;
   padding: 6rem 1% 1em;
   align-items: flex-start;
@@ -1445,6 +1444,12 @@ details[open] .icon {
   .prod-container {
     width: 100%;
   }
+  .slider-container {
+    height: 80%;
+  }
+  .breadcrumbs {
+    margin: 5px auto;
+  }
   .prod-content {
     width: 100%;
     padding: 1rem 2% 1rem;
@@ -1496,19 +1501,20 @@ details[open] .icon {
   }
   .footer-box iframe {
     height: 200px;
-    width: 350px;
+    width: 280px;
   }
   .footer-company {
     padding: 6rem 12% 1rem;
     display: grid;
     grid-template-columns: 2; /* Membagi jadi 3 kolom rata kiri */
-    gap: 20px;
-    align-items: start;
+    gap: 12px;
+    align-items: left;
   }
   .footer-content {
     padding: 6rem 12% 8rem;
-    display: grid;
+    display: flex;
     grid-template-columns: 1; /* Membagi jadi 3 kolom rata kiri */
+    justify-content: space-between;
     gap: 20px;
     align-items: start;
   }
@@ -1517,7 +1523,10 @@ details[open] .icon {
     font-size: large;
   }
   .footer-box a {
-    font-size: 11px;
+    font-size: 10px;
+  }
+  .footer-box p {
+    font-size: 9px;
   }
   .footer-box ul {
     column-count: 3; /* Membagi list menjadi 2 kolom */

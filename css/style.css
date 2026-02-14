@@ -682,9 +682,8 @@ li {
   align-content: center;
   align-items: center;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   margin: 1rem auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9) inset;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -699,36 +698,57 @@ li {
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 .slides-container {
-  width: 500%;
-  height: 100%;
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 .slide-container {
-  width: 20%;
+  display: flex;
+  width: 100%;
   transition: 1s;
 }
 .slide-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.5s ease-in-out;
 }
 .arrow-left,
 .arrow-right {
-  padding: 1rem;
+  padding: 3rem;
+  left: 2;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   font-size: 1.5rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .arrow-right {
-  left: 422px;
+  left: 100rem;
 }
 .arrow-left:hover,
 .arrow-right:hover {
   color: var(--col3);
   transition: 0.3s ease-in-out;
+}
+.dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  top: 50rem;
+  gap: 1rem;
+}
+.dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50px;
+  background-color: var(--txtcol);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.dot.active {
+  scale: 1.5;
 }
 .prod-title {
   width: 100%;
@@ -929,12 +949,12 @@ details[open] .icon {
   width: 100%;
 }
 .contactus-bg {
-  color: var(--txtcol3);
+  color: var(--txtcol2);
   padding: 5rem 7% 5rem;
   background: linear-gradient(
     45deg,
-    rgba(171, 168, 125, 0.9),
-    rgb(74, 72, 48, 0.9)
+    rgba(255, 255, 255, 0.9),
+    rgba(221, 221, 221, 0.9)
   );
   background-size: 250% 250%;
   animation: gradient 8s ease infinite;
@@ -963,6 +983,7 @@ details[open] .icon {
 }
 .contact-content h1 {
   font-size: 2.8rem;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
 }
 .contact-content p {
   text-align: center;
@@ -978,19 +999,19 @@ details[open] .icon {
   justify-content: center;
   align-content: center;
   text-align: center;
-  background-color: var(--bg2);
-  color: var(--col1);
+  background-color: var(--col2);
+  color: var(--bg2);
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  border: 1px solid var(--bg2);
+  border: 1px solid var(--col2);
   border-radius: 5px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 .contact-content button:hover {
-  color: var(--bg2);
-  background-color: var(--col2);
+  color: var(--txtcol);
+  background-color: var(--bg2);
 }
 /* End of Contact us */
 /* WCU */
@@ -1449,10 +1470,23 @@ details[open] .icon {
     width: 100%;
   }
   .slider-container {
-    height: 80%;
+    width: 100%;
+    height: 45vh;
+  }
+  .slides-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .arrow-left,
+  .arrow-right {
+    display: none;
   }
   .breadcrumbs {
     margin: 5px auto;
+  }
+  .dots {
+    display: none;
   }
   .prod-content {
     width: 100%;
@@ -1500,9 +1534,6 @@ details[open] .icon {
   .wcu-box {
     text-align: center;
   }
-  .slider-container {
-    height: 50vh;
-  }
   .footer-box iframe {
     height: 200px;
     width: 280px;
@@ -1515,7 +1546,7 @@ details[open] .icon {
     align-items: left;
   }
   .footer-content {
-    padding: 6rem 9% 8rem;
+    padding: 6rem 19% 8rem;
     display: flex;
     grid-template-columns: 1; /* Membagi jadi 3 kolom rata kiri */
     justify-content: space-between;

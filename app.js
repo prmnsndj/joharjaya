@@ -1,4 +1,16 @@
 const navbarNav = document.querySelector(".navbar-nav");
+const slidesContainer = document.querySelector(".slide-container");
+const imageSlides = document.querySelectorAll(".slide-container img");
+const dots = document.querySelectorAll(".dot");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+
+let start;
+let end;
+let slideIndex = 0;
+let windowWidth = window.innerWidth;
+let slideWidth = 1565;
+let screenWidth = window.screen.width;
 
 document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
@@ -34,8 +46,7 @@ document.addEventListener("scroll", () => {
   if (window.scrollY > 650) {
     nav.classList.add("scrolled");
   } else {
-    (nav.classList.remove("scrolled"),
-      dropdowncontent.classList.remove("scrolled"));
+    nav.classList.remove("scrolled");
   }
 });
 
@@ -63,3 +74,52 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+// Pake Panah
+function previousSlide() {
+  slideIndex <= 0 ? (slideIndex = imageSlides.length - 1) : slideIndex--;
+
+  updateSlider();
+}
+
+function nextSlide() {
+  slideIndex >= imageSlides.length - 1 ? (slideIndex = 0) : slideIndex++;
+
+  updateSlider();
+}
+
+arrowLeft.addEventListener("click", previousSlide);
+arrowRight.addEventListener("click", nextSlide);
+
+// Pake panah keyboard
+window.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    nextSlide();
+  } else if (e.key === "ArrowLeft") {
+    previousSlide();
+  }
+});
+// Pake Dots
+function goToSlide(index) {
+  slideIndex = index;
+  updateSlider();
+}
+
+dots.forEach((dot, index) =>
+  dot.addEventListener("click", () => goToSlide(index)),
+);
+// Swipe
+slidesContainer.addEventListener("touchstart", (e) => {
+  start = e.touches[0].clientX;
+});
+
+slidesContainer.addEventListener("touchend", (e) => {
+  end = e.changedTouches[0].clientX;
+  const diff = end - start;
+  if (diff > 50) {
+    previousSlide();
+  } else if (diff < -50) {
+    nextSlide();
+  }
+});
+//

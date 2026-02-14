@@ -1515,7 +1515,7 @@ details[open] .icon {
     align-items: left;
   }
   .footer-content {
-    padding: 6rem 17% 8rem;
+    padding: 6rem 9% 8rem;
     display: flex;
     grid-template-columns: 1; /* Membagi jadi 3 kolom rata kiri */
     justify-content: space-between;

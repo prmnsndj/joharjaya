@@ -88,9 +88,6 @@ function nextSlide() {
   updateSlider();
 }
 
-arrowLeft.addEventListener("click", previousSlide);
-arrowRight.addEventListener("click", nextSlide);
-
 // Pake panah keyboard
 window.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") {

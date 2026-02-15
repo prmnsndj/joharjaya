@@ -41,14 +41,16 @@
     <nav class="navbar" id="navpro">
       <a href="index.html" class="navbar-logo">déPalimanan</a>
       <div class="navbar-nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#aboutus">About us</a>
-        <a href="product.html" style="color: #aba87d">Product</a>
-        <a href="contact.html">Contact</a>
-        <a href="faq.html">FAQ</a>
+        <a href="index.html">HOME</a>
+        <a href="#aboutus">COMPANY</a>
+        <a href="product.html" style="color: #aba87d">PRODUCT</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div class="navbar-icon" style="font-size: 1.4rem">
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        <a onclick="window.location = 'none'" id="hamburger-menu"
+          ><i data-feather="menu"></i
+        ></a>
       </div>
     </nav>
     <!-- Navbar End -->
@@ -59,31 +61,39 @@
         style="background: linear-gradient(45deg, rgba(172, 143, 65, 0.7))"
       >
         <div class="prod-container">
+          <!-- Breadcrumbs-->
+          <section class="b-and-t">
+            <nav class="breadcrumbs">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li>
+                  <a href="product.html#tiles-and-walling">Tiles & Walling</a>
+                </li>
+                <li class="active">Yellow Sandstone</li>
+              </ul>
+            </nav>
+            <!--Breadcrumbs End-->
+            <!-- Tags-->
+            <nav class="tags">
+              <ul>
+                <li><a href="index.html">Palimanan</a></li>
+                <li>
+                  <a href="product.html#tiles-and-walling">Tiles & Walling</a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+          <!--Tags End-->
           <div class="slider-container">
             <div class="slides-container">
               <div class="slide-container">
-                <img src="img/Yellow-sandstone-head.webp" />
-                <img src="img/aboutus.jpg" />
-                <img src="img/aboutus.jpg" />
-                <img src="img/aboutus.jpg" />
-                <img src="img/aboutus.jpg" />
+                <img src="img/YSandstone-head.webp" />
               </div>
-              <div class="slider-title">Yellow Sandstone</div>
             </div>
           </div>
-          <div class="dots">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <div class="arrow-left"><i class="bi bi-arrow-left-circle"></i></div>
-          <div class="arrow-right">
-            <i class="bi bi-arrow-right-circle"></i>
-          </div>
-          <div class="prod-content hidden">
-            <div class="prod-title">Available Finishes</div>
+          <div class="prod-content">
+            <div class="prod-title">Available Finishing</div>
             <div class="prod-box" style="cursor: pointer">
               <img src="img/product/natural-stone/Yellow Sandstone/Sawn.webp" />
               <h2>Sawn</h2>
@@ -120,7 +130,7 @@
               <table class="prod-table hidden">
                 <thead>
                   <tr>
-                    <th>Size</th>
+                    <th>Size (cm)</th>
                     <th>Sawn</th>
                     <th>Honed</th>
                     <th>Rough</th>
@@ -128,55 +138,49 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>10 x 10 cm</td>
+                    <td>10 x 10</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>10 x 20 cm</td>
+                    <td>10 x 20</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>10 x 30 cm</td>
+                    <td>10 x 30</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>20 x 20 cm</td>
+                    <td>20 x 20</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                   </tr>
                   <tr>
-                    <td>20 x 30 cm</td>
+                    <td>20 x 30</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: red">✘</td>
                   </tr>
                   <tr>
-                    <td>20 x 40 cm</td>
+                    <td>20 x 40</td>
                     <td style="color: green">✔</td>
                     <td style="color: green">✔</td>
                     <td style="color: red">✘</td>
                   </tr>
                   <tr>
-                    <td>30 x 30 cm</td>
+                    <td>30 x 30</td>
                     <td style="color: red">✘</td>
                     <td style="color: red">✘</td>
                     <td style="color: red">✘</td>
                   </tr>
                   <tr>
-                    <td>30 x 60 cm</td>
-                    <td style="color: red">✘</td>
-                    <td style="color: red">✘</td>
-                    <td style="color: red">✘</td>
-                  </tr>
-                  <tr>
-                    <td>40 x 60 cm</td>
+                    <td>30 x 60</td>
                     <td style="color: red">✘</td>
                     <td style="color: red">✘</td>
                     <td style="color: red">✘</td>
@@ -193,7 +197,7 @@
           </div>
           <div class="prod-p">
             <iframe
-              src="Yellow Sandstone.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              src="file/Yellow Sandstone.pdf#toolbar=0&navpanes=0&scrollbar=0"
               width="100%"
               height="1000px"
               style="border: none"
@@ -201,7 +205,7 @@
             >
               <p>
                 Your browser does not support PDFs.
-                <a href="Yellow Sandstone.pdf">Download the PDF</a>.
+                <a href="file/Yellow Sandstone.pdf">Download the PDF</a>.
               </p>
             </iframe>
           </div>
@@ -265,89 +269,61 @@
     <!--Slideshow End-->
     <!-- Contact us-->
     <section class="contactus">
-      <div class="contact-content">
-        <h1>Your Trusted B2B Partner</h1>
-        <p>
-          “Our commitment as your trusted B2B partner is to supply authentic
-          natural stone products while ensuring quality control, sustainability,
-          and long-term collaboration.”
-        </p>
+      <div class="contactus-bg">
+        <div class="contact-content">
+          <h1>Your Trusted B2B Partner</h1>
+          <p>
+            Our commitment as your trusted B2B partner is to supply authentic
+            natural stone products while ensuring quality control,
+            sustainability, and long-term collaboration.
+          </p>
+          <div class="contact-button">
+            <a href="https://wa.me/6287777497559"><button>WhatsApp</button></a>
+            <a href="mailto:cvjoharjaya@gmail.com"><button>Email</button></a>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Contact us End-->
     <!-- Footer-->
     <section class="footer" id="contact">
       <div class="footer-bg">
-        <h1>JOHAR JAYA INDONESIA</h1>
+        <div class="footer-company-content">
+          <div class="footer-box">
+            <h1>JOHAR JAYA</h1>
+            <p>Crafted by pleasure.</p>
+          </div>
+        </div>
         <div class="footer-content">
-          <div class="footer-title">
-            Product List
-            <div class="footer-box">
-              <a href="sukabumi.html">Bali Sukabumi</a><br />
-              <a href="sukabumi.html">Black Lava</a><br />
-              <a href="sukabumi.html">Palimanan Carrara</a><br />
-              <a href="sukabumi.html">Rustic Sukabumi</a><br />
-              <a href="sukabumi.html">Andesite</a><br />
-              <a href="sukabumi.html">Yellow Palimanan</a><br />
-              <a href="sukabumi.html">Beige Palimanan</a><br />
-              <a href="sukabumi.html">Yellow Sandstone</a><br />
-              <a href="sukabumi.html">Palimanan White</a><br />
-              <a href="sukabumi.html">Basalto</a><br />
-              <a href="sukabumi.html">Paras Kerobokan</a><br />
-              <a href="sukabumi.html">Paras White</a><br />
-              <a href="sukabumi.html">Beige Palimanan</a><br />
-              <a href="sukabumi.html">Yellow Sandstone</a><br />
-              <a href="sukabumi.html">Palimanan White</a><br />
-              <a href="sukabumi.html">Basalto</a><br />
-              <a href="sukabumi.html">Paras Kerobokan</a><br />
-              <a href="sukabumi.html">Paras White</a><br />
+          <div class="footer-box">
+            <div class="footer-title">
+              <h2>Company</h2>
             </div>
+            <ul id="companybox">
+              <li><a href="sukabumi.html">Legitimation</a></li>
+              <li><a href="rusticsukabumi.html">About us</a></li>
+              <li><a href="yellowsandstone.html">Contact</a></li>
+              <li><a href="palimanan.html">FAQ</a></li>
+            </ul>
           </div>
-          <div class="footer-title">
-            Product List
-            <div class="footer-box">
-              <a href="sukabumi.html">Bali Sukabumi</a><br />
-              <a href="sukabumi.html">Black Lava</a><br />
-              <a href="sukabumi.html">Palimanan Carrara</a><br />
-              <a href="sukabumi.html">Rustic Sukabumi</a><br />
-              <a href="sukabumi.html">Andesite</a><br />
-              <a href="sukabumi.html">Yellow Palimanan</a><br />
-              <a href="sukabumi.html">Beige Palimanan</a><br />
-              <a href="sukabumi.html">Yellow Sandstone</a><br />
-              <a href="sukabumi.html">Palimanan White</a><br />
-              <a href="sukabumi.html">Basalto</a><br />
-              <a href="sukabumi.html">Paras Kerobokan</a><br />
-              <a href="sukabumi.html">Paras White</a><br />
-              <a href="sukabumi.html">Beige Palimanan</a><br />
-              <a href="sukabumi.html">Yellow Sandstone</a><br />
-              <a href="sukabumi.html">Palimanan White</a><br />
-              <a href="sukabumi.html">Basalto</a><br />
-              <a href="sukabumi.html">Paras Kerobokan</a><br />
-              <a href="sukabumi.html">Paras White</a><br />
+          <div class="footer-box">
+            <div class="footer-title">
+              <h2>Product List</h2>
             </div>
-          </div>
-          <div class="footer-title">
-            Product List
-            <div class="footer-box">
-              <a href="sukabumi.html">Bali Sukabumi</a><br />
-              <a href="sukabumi.html">Black Lava</a><br />
-              <a href="sukabumi.html">Palimanan Carrara</a><br />
-              <a href="sukabumi.html">Rustic Sukabumi</a><br />
-              <a href="sukabumi.html">Andesite</a><br />
-              <a href="sukabumi.html">Yellow Palimanan</a><br />
-              <a href="sukabumi.html">Beige Palimanan</a><br />
-              <a href="sukabumi.html">Yellow Sandstone</a><br />
-              <a href="sukabumi.html">Palimanan White</a><br />
-              <a href="sukabumi.html">Basalto</a><br />
-              <a href="sukabumi.html">Paras Kerobokan</a><br />
-              <a href="sukabumi.html">Paras White</a><br />
-              <a href="sukabumi.html">Beige Palimanan</a><br />
-              <a href="sukabumi.html">Yellow Sandstone</a><br />
-              <a href="sukabumi.html">Palimanan White</a><br />
-              <a href="sukabumi.html">Basalto</a><br />
-              <a href="sukabumi.html">Paras Kerobokan</a><br />
-              <a href="sukabumi.html">Paras White</a><br />
-            </div>
+            <ul>
+              <li><a href="greensukabumi.html">Sukabumi</a></li>
+              <li><a href="rusticsukabumi.html">Palimanan</a></li>
+              <li><a href="stripes.html">Lavastone</a></li>
+              <li><a href="beigepalimanan.html">Andesite</a></li>
+              <li><a href="beigepalimanan.html">Basalt</a></li>
+              <li><a href="paraswhite.html">Paras</a></li>
+              <li><a href="kerobokan.html">Kerobokan</a></li>
+              <li><a href="paraswhite.html">River Stone</a></li>
+              <li><a href="paraswhite.html">Petrified Wood</a></li>
+              <li><a href="paraswhite.html">Marble</a></li>
+              <li><a href="kerobokan.html">Lamp</a></li>
+              <li><a href="kerobokan.html">Planter</a></li>
+            </ul>
           </div>
         </div>
       </div>

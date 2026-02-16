@@ -169,7 +169,7 @@ li {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9) inset;
 }
 .slides {
-  width: 500%;
+  width: 600%;
   height: 100%;
   display: flex;
 }
@@ -177,7 +177,7 @@ li {
   display: none;
 }
 .slide {
-  width: 20%;
+  width: 16.666666666666%;
   transition: 1s;
 }
 .slide img {
@@ -209,6 +209,7 @@ li {
   font-size: 1.1rem;
   text-wrap: balance;
   width: 40%;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
 }
 .button-slider {
   display: flex;
@@ -220,11 +221,11 @@ li {
 .button-slider a {
   margin-top: 1rem;
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--bg);
   background-color: var(--col2);
-  border: 2px solid var(--col2);
+  border: 1px solid var(--col2);
   border-radius: 7px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -232,7 +233,7 @@ li {
 .button-slider a:hover {
   background-color: var(--bg2);
   color: var(--col2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   transition: 0.2s ease-in-out;
 }
 .navigation-manual {
@@ -260,16 +261,19 @@ li {
   margin-left: 0;
 }
 #radio2:checked ~ .first {
-  margin-left: -20%;
+  margin-left: -16.666666666%;
 }
 #radio3:checked ~ .first {
-  margin-left: -40%;
+  margin-left: -33.333333333333%;
 }
 #radio4:checked ~ .first {
-  margin-left: -60%;
+  margin-left: -50%;
 }
 #radio5:checked ~ .first {
-  margin-left: -80%;
+  margin-left: -66.666666666666%;
+}
+#radio6:checked ~ .first {
+  margin-left: -83.333333333333%;
 }
 .navigation-auto {
   position: absolute;
@@ -301,6 +305,9 @@ li {
   background: #fff;
 }
 #radio5:checked ~ .navigation-auto .auto-btn5 {
+  background: #fff;
+}
+#radio6:checked ~ .navigation-auto .auto-btn6 {
   background: #fff;
 }
 /* End of Hero Section */
@@ -440,7 +447,7 @@ li {
 }
 .about-img img:hover {
   filter: grayscale(0);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   transition: 0.2s ease-in-out;
 }
 .text-about {
@@ -460,12 +467,12 @@ li {
 }
 .text-about button {
   margin-top: 1rem;
-  padding: 2rem 2.3rem;
-  font-size: 1.1rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--bg2);
   background-color: var(--col2);
-  border: 2px solid var(--col2);
+  border: 1px solid var(--col2);
   border-radius: 7px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -473,7 +480,7 @@ li {
 .text-about button:hover {
   background-color: var(--bg2);
   color: var(--col2);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: 0.2s ease-in-out;
 }
 /* End of About us */
@@ -1053,6 +1060,7 @@ details[open] .icon {
 .contact-content button:hover {
   color: var(--col2);
   background-color: var(--bg2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 /* End of Contact us */
 /* WCU */
@@ -1480,13 +1488,7 @@ details[open] .icon {
     gap: 2px;
     padding: 1rem 2% 1rem;
   }
-  #sinks {
-    flex: 1 1 50rem;
-  }
-  #pedestal {
-    flex: 1 1 50rem;
-  }
-  #furniture {
+  #one-row {
     flex: 1 1 50rem;
   }
   .slider-title {

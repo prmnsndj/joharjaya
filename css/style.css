@@ -528,6 +528,7 @@ li {
   text-underline-offset: 3px;
   text-decoration-color: transparent;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 .home-collection-box:hover {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
@@ -546,8 +547,8 @@ li {
   opacity: 0.6;
   transition: 0.2s ease-in-out;
 }
-.home-collection-box h2 {
-  font-size: 1.4rem;
+.home-collection-box figcaption {
+  font-size: 1.3rem;
   font-weight: 600;
   text-align: center;
   color: var(--txtcol1);
@@ -569,12 +570,24 @@ li {
   justify-self: center;
 }
 .collections h1 {
+  padding: 0 2rem;
   font-size: 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-family: "Google Sans Flex", sans-serif;
   text-align: center;
   color: var(--txtcol);
   text-shadow: 6px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.button-home {
+  font-size: 1.3rem;
+  font-family: "Google Sans Flex", sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.button-home a {
+  color: var(--col2);
 }
 .collection-content-bg {
   padding: 1rem 1% 9rem;
@@ -585,15 +598,70 @@ li {
   justify-content: center;
   gap: 1rem;
 }
+.categories {
+  padding: 1rem 1% 1rem;
+}
 .collection-content {
   padding: 1.25rem 1%;
   display: flex;
   margin: auto;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
   gap: 1rem;
   width: 70%;
+  justify-content: center; /* Teks rata tengah secara horizontal */
+  align-items: center; /* Teks rata tengah secara vertikal */
+  text-align: center;
+}
+.collcat {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 17rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.collcat-box {
+  flex: 1 1 10rem;
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 1rem 1% 1rem;
+  height: fit-content;
+  transition: 0.2s ease-in-out;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: transparent;
+  cursor: pointer;
+}
+.collcat ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+}
+.collcat li {
+  display: flex;
+  flex-grow: 1;
+  font-size: 1rem;
+  background-color: var(--col2);
+  padding: 0.5rem 1.6rem;
+  border-radius: 0.4rem;
+}
+.collcat li a {
+  text-decoration: none;
+  color: var(--bg2);
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+.collcat li a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.collcat li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: 0.3s ease-in-out;
 }
 .collection-tittle {
   width: 100%;
@@ -605,7 +673,6 @@ li {
 }
 .collection-tittle h2 {
   font-size: 2.5rem;
-  margin-top: 3rem;
   font-weight: 600;
   color: var(--txtcol);
   text-decoration: 2px underline;
@@ -624,8 +691,11 @@ li {
   text-decoration-color: transparent;
   cursor: pointer;
 }
-.pali {
+.tworow {
   flex: 1 1 2rem;
+}
+#threerow {
+  flex: 1 1 25rem;
 }
 .collection-box:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -650,7 +720,6 @@ li {
   text-align: center;
   color: var(--txtcol);
 }
-
 /* End of Collections */
 /* Product Content */
 .prod {
@@ -1060,7 +1129,7 @@ details[open] .icon {
 /* End of Contact us */
 /* WCU */
 .wcu {
-  background-image: url("../img/containers-at-factoy.jpg");
+  background-image: url("../img/factory/homecontent-1.webp");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1463,7 +1532,7 @@ details[open] .icon {
     width: 100%;
   }
   .collection-content {
-    padding: 10rem 2% 7rem;
+    padding: 2rem 2% 2rem;
     width: 90%;
   }
   .collection-tittle {
@@ -1478,6 +1547,12 @@ details[open] .icon {
   }
   #one-row {
     flex: 1 1 50rem;
+  }
+  .tworow {
+    flex: 1 1 15rem;
+  }
+  .collcat li a.active {
+    text-underline-offset: 1px;
   }
   .slider-title {
     margin-top: 40rem;

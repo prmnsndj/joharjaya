@@ -240,7 +240,7 @@ li {
   position: absolute;
   display: flex;
   width: 100%;
-  margin: -5rem auto;
+  margin: -7rem auto;
   justify-content: center;
   align-items: center;
 }
@@ -279,7 +279,7 @@ li {
   position: absolute;
   display: flex;
   width: 100%;
-  margin-top: -5rem;
+  margin-top: -7rem;
   justify-content: center;
   align-items: center;
 }
@@ -388,7 +388,7 @@ li {
 /* End of Services Section */
 /* About us */
 .aboutus {
-  background-image: url("../img/factory-2.jpg");
+  background-image: url("../img/factory/factory-7.webp");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: repeat;
@@ -1038,11 +1038,6 @@ details[open] .icon {
   text-align: center;
   text-wrap: balance;
 }
-.contact-button {
-  align-content: center;
-  justify-content: center;
-  border-radius: 10px;
-}
 .contact-button button {
   justify-content: center;
   align-content: center;
@@ -1053,7 +1048,7 @@ details[open] .icon {
   font-size: 1.2rem;
   font-weight: 600;
   border: 1px solid var(--col2);
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -1394,13 +1389,6 @@ details[open] .icon {
   }
   .navbar .navbar-icon {
     display: flex;
-  }
-  .hero .hero-content {
-    margin: auto;
-    min-height: 70vh;
-  }
-  .hero .hero-content .hero-text h1 {
-    font-size: 2.5rem;
   }
   .slider {
     width: 100%;

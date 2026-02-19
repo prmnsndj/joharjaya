@@ -174,7 +174,7 @@ li {
   justify-self: center;
   align-content: center;
   width: 100%;
-  height: 100vh;
+  height: 97vh;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9) inset;
 }
@@ -780,7 +780,7 @@ li {
   align-content: center;
   align-items: center;
   width: 100%;
-  height: 60vh;
+  height: 72vh;
   margin: 1rem auto;
   border-radius: 10px;
   overflow: hidden;
@@ -1101,7 +1101,7 @@ details[open] .icon {
     background-position: 0% 50%;
   }
 }
-.contact-content {
+.contactus-content {
   display: flex;
   margin: auto;
   flex-wrap: wrap;
@@ -1110,17 +1110,17 @@ details[open] .icon {
   gap: 3rem;
   width: 80%;
 }
-.contact-content h1 {
+.contactus-content h1 {
   font-size: 2.5rem;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
 }
-.contact-content p {
+.contactus-content p {
   width: 90%;
   font-size: 1.1rem;
   text-align: center;
   text-wrap: balance;
 }
-.contact-button button {
+.contactus-button button {
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -1134,7 +1134,7 @@ details[open] .icon {
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
-.contact-content button:hover {
+.contactus-content button:hover {
   color: var(--col2);
   background-color: var(--bg2);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
@@ -1629,10 +1629,10 @@ details[open] .icon {
   width: 100%;
 }
 .faq-bg {
-  padding: 13.5rem 1% 11rem;
+  padding: 13.5rem 1% 1rem;
 }
 .faq-bg h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
@@ -1654,7 +1654,7 @@ details[open] .icon {
   align-content: center;
   justify-content: center;
   gap: 1rem;
-  width: 80%;
+  width: 90%;
 }
 .faq-box {
   flex: 1 1 25rem;
@@ -1675,22 +1675,63 @@ details[open] .icon {
   margin-bottom: 2rem;
 }
 .faq-box h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  text-align: center;
+  text-decoration: underline 2px;
+  text-decoration-color: var(--col3);
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--bg2);
   padding: 1rem 0;
 }
+.faq-box h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--bg2);
+  padding: 0;
+}
 .faq-box p {
   background-color: var(--bg2);
   color: rgba(0, 0, 0, 0.8);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.2;
   text-wrap: balance;
   padding: 2rem 2rem;
   border-radius: 8px;
 }
+.faq-box iframe {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
 /* FAQ End */
+.maps {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--col1); /* Set a background color */
+  color: var(--bg2); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 1rem; /* Some padding */
+  border-radius: 2rem; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  transition: all 0.3s ease-in-out;
+}
+
+#myBtn:hover {
+  background-color: var(--txtcol); /* Add a dark-grey background on hover */
+}
 /* Media Queries */
 /*HD*/
 @media (max-width: 1630px) {
@@ -2006,6 +2047,16 @@ details[open] .icon {
   }
   .company-image img {
     width: 100%;
+  }
+  .faq-box {
+    padding: 3rem 7%;
+  }
+  .faq-box h2 {
+    text-align: center;
+  }
+  .faq-box iframe {
+    width: 100%;
+    height: 100%;
   }
 }
 /* Mobile */

@@ -1670,9 +1670,8 @@ details[open] .icon {
   transition: 0.2s;
 }
 .faq-box i {
-  font-size: 3rem;
-  color: var(--col2);
-  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: var(--bg2);
 }
 .faq-box h2 {
   font-size: 1.7rem;
@@ -1694,8 +1693,8 @@ details[open] .icon {
 .faq-box p {
   background-color: var(--bg2);
   color: rgba(0, 0, 0, 0.8);
-  font-size: 1.1rem;
-  line-height: 1.2;
+  font-size: 1rem;
+  line-height: 1.5;
   text-wrap: balance;
   padding: 2rem 2rem;
   border-radius: 8px;

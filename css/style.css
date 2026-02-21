@@ -1723,6 +1723,15 @@ details a {
   padding: 2rem 2rem;
   border-radius: 8px;
 }
+.faq-box span {
+  color: var(--col1);
+  text-decoration: underline transparent;
+  transition: 0.3s ease-in-out;
+}
+.faq-box span:hover {
+  color: var(--col3);
+  text-decoration-color: var(--col3);
+}
 .faq-box iframe {
   display: flex;
   width: 100%;
